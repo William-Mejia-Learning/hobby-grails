@@ -1,0 +1,114 @@
+header.jumbotron {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(7rem + 72px);
+    padding-bottom: 7rem;
+    background: -webkit-linear-gradient(to right, rgb(143, 176, 144), rgba(166, 193, 238, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(143, 176, 144), rgba(166, 193, 238, 1));
+    background-repeat: no-repeat;
+    /*background-position: center center;*/
+    background-attachment: scroll;
+    background-size: cover;
+}
+header.jumbotron .jumbotron-content {
+    z-index: 1;
+    position: relative;
+}
+header.jumbotron .jumbotron-content .jumbotron-heading {
+    font-size: 4rem;
+}
+header.jumbotron .jumbotron-content .jumbotron-subheading {
+    font-size: 2rem;
+}
+header.jumbotron .bg-circle {
+    z-index: 0;
+    position: absolute;
+    border-radius: 100%;
+    background: -webkit-linear-gradient(to right, rgb(143, 176, 144), rgba(166, 193, 238, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(143, 176, 144, 0.51), rgba(166, 193, 238, 0.51))
+}
+header.jumbotron .bg-circle-1 {
+    height: 90rem;
+    width: 90rem;
+    bottom: -55rem;
+    left: -55rem;
+}
+header.jumbotron .bg-circle-2 {
+    height: 50rem;
+    width: 50rem;
+    top: -25rem;
+    right: -25rem;
+}
+.btn{
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+}
+.btn-primary{
+    color: #fff;
+    background-color: #273b1f;
+    border-color: #273b1f;
+}
+.btn-primary:hover{
+    color: #fff;
+    background-color: #334D28FD;
+    border-color: #334D28FD;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+.socials .btn{
+    border-radius: 100%;
+
+}
+
+/*------------------------------------------*/
+
+.main{
+    /*min-height: 100%;*/
+    margin-left: 250px;
+    margin-right: 0;
+}
+.side-nav{
+    position: absolute;
+    min-height: 100%;
+    /*font-size: 25px;*/
+    height: 100%;
+    width: 250px;
+}
+.side-nav a:hover {
+    color: #818181;
+}
+#footer{
+    z-index: 1;
+    position: relative;
+    bottom: 0;
+}
+.card-body{
+    min-height: 50px;
+}
+section .event-cards{
+    margin-right: 0px;
+}
+.mini-jumbo1{
+    background: linear-gradient(45deg, #d2c6bc, #273b1f);
+}
+.mini-jumbo{
+    background-color: #d2c6bc;
+}
+.mini-jumbo2{
+    background-color: #273b1f;
+}
+
+@media screen and (min-width: 375px) and (max-width: 412px){
+    .main{
+        margin-left: 0px;
+        justify-content: center;
+    }
+}
