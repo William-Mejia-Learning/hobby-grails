@@ -103,18 +103,18 @@ hibernate:
         queries: false
         use_second_level_cache: false
         use_query_cache: false
-        region.factory_class: 'org.hibernate.cache.ehcache.EhCacheRegionFactory'
 dataSource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    dbCreate: update
-    username:
-    password:
+    pooled: true
+    jmxExport: true
+    driverClassName: com.mysql.jdbc.Driver
+    username: william
+    password: ''
 
 environments:
     development:
         dataSource:
             dbCreate: update
-            url: "jdbc:mysql://127.0.0.1:3306/ocb?useUnicode=yes&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+            url: jdbc:mysql://localhost:3306/grailsdb?useUnicode=yes&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
     test:
         dataSource:
             dbCreate: update
