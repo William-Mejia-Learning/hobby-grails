@@ -2,9 +2,9 @@ package hobbyhopper
 
 class User {
 
-    int id
+    int id;
 
-    private String username
+    private String username;
 
     private String email;
 
@@ -12,12 +12,19 @@ class User {
 
     private String image;
 
+    static hasMany = [user_events : UserEvent]
+
     User(String username, String email, String password, String image) {
         this.username = username
         this.email = email
         this.password = password
         this.image = image
     }
+
+    User() {
+
+    }
+
 
     int getId() {
         return id
@@ -63,14 +70,19 @@ class User {
     }
 
     static mapping = {
-        table 'users'
+        version false
+        table "users"
+        id column: "id"
         username column: "username"
         email column: "email"
         password column: "password"
         image column: "image"
+        user_events joinTable: [name: "user_events", key: "id", column: "user_id"]
+
     }
 
     String toString() {
         "${username}"
     }
+
 }
