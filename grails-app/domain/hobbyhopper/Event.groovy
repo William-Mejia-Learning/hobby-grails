@@ -22,7 +22,7 @@ class Event {
 
 //    static belongsTo = [UserEvent]
 //
-    static hasMany = [events : Event]
+    static hasMany = [userEvents : UserEvent, images : Image]
 
     Event(String eventName, String referenceUrl, String address, Date startDate, Date endDate, String startTime, String endTime, int categoryId) {
         this.eventName = eventName
@@ -114,7 +114,6 @@ class Event {
     static mapping = {
         version false
         table "events"
-        id column: "id"
         eventName column: "event_name"
         referenceUrl column: "reference_url"
         address column: "address"
@@ -124,7 +123,9 @@ class Event {
         endTime column: "end_time"
         categoryId column: "category_id"
 
-        events joinTable: [name: "user_events", key: "id", column: "event_id"]
+        images joinTable: [name: "image", key: "id", column: "event_id"]
+
+        userEvents joinTable: [name: "user_events", key: "id", column: "event_id"]
 
     }
 

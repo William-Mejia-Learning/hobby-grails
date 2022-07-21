@@ -33,7 +33,6 @@ class Category {
     static mapping = {
         version false
         table "category"
-        id column: "id"
         categoryName column: "category_name"
     }
 

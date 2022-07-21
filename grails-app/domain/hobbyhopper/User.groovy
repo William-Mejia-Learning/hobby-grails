@@ -1,8 +1,10 @@
 package hobbyhopper
+import grails.rest.Resource
+
 
 class User {
 
-    int id;
+    long id;
 
     private String username;
 
@@ -12,7 +14,7 @@ class User {
 
     private String image;
 
-    static hasMany = [user_events : UserEvent]
+    static hasMany = [userEvents : UserEvent]
 
     User(String username, String email, String password, String image) {
         this.username = username
@@ -68,19 +70,18 @@ class User {
     static constraints = {
         id(unique: true, nullable:false, blank:false)
     }
-
+//user_events
     static mapping = {
         version false
         table "users"
-        id column: "id"
         username column: "username"
         email column: "email"
         password column: "password"
         image column: "image"
-        user_events joinTable: [name: "user_events", key: "id", column: "user_id"]
+        userEvents joinTable: [name: "user_events", key: "id", column: "user_id"]
 
     }
-
+//
     String toString() {
         "${username}"
     }
