@@ -4,7 +4,7 @@ class UserEvent {
 
     long id
 
-    static belongsTo = [User]
+    static belongsTo = [User, Event]
 
     private boolean isOwner
 
@@ -33,9 +33,7 @@ class UserEvent {
     static mapping = {
         version false
         table "user_events"
-        id column: "id"
         isOwner column: "is_owner"
-        events column: ""
     }
 
     static constraints = {
