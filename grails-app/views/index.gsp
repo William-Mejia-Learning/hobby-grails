@@ -76,7 +76,7 @@
             <h1 class="jumbotron-heading">Find Your Fun!</h1>
             <a class="btn btn-primary btn-xl rounded-pill mt-5" th:href="${'/event'}">View Events</a> <p class="my-auto">or</p>
 
-            <a sec:authorize="!isAuthenticated()" class="btn btn-primary btn-xl rounded-pill " href="${'/signup'}">Sign up</a>
+            <a sec:authorize="!isAuthenticated()" class="btn btn-primary btn-xl rounded-pill " href="${'/user/create'}">Sign up</a>
 
             <a sec:authorize="isAuthenticated()" class="btn btn-primary btn-xl rounded-pill " th:href="${'/event/create-edit-event'}">Create an event</a>
 

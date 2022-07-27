@@ -4,31 +4,7 @@ class Category {
 
     long id
 
-    private String categoryName
-
-    Category(version, String categoryName) {
-        this.version = version
-        this.categoryName = categoryName
-    }
-
-    Category() {
-    }
-
-    long getId() {
-        return id
-    }
-
-    void setId(long id) {
-        this.id = id
-    }
-
-    String getCategoryName() {
-        return categoryName
-    }
-
-    void setCategoryName(String categoryName) {
-        this.categoryName = categoryName
-    }
+    String categoryName
 
     static mapping = {
         version false
