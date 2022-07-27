@@ -75,44 +75,17 @@
             </div>
 
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 my-5">
-                <g:form resource="${this.user}" method="POST">
-
-                    <div class="form-outline mt-3">
-                        <f:field property="username" bean="user">
-                            <g:textField name="username" class="d-flex form-control form-control-lg"/>
-                        </f:field>
-                    </div>
-
-                    <div class="form-outline mt-3">
-                        <f:field property="email" bean="user">
-                            <g:textField name="email" class="d-flex form-control form-control-lg"/>
-                        </f:field>
-                    </div>
-
-                    <div class="form-outline mt-3">
-                        <f:field property="password" bean="user">
-                            <g:textField name="password" class="d-flex form-control form-control-lg"/>
-                        </f:field>
-                    </div>
-
-
-                    <div class="form-outline mt-3">
-                        <f:field property="image" bean="user">
-                            <g:textField name="image" class="d-flex form-control form-control-lg"/>
-                        </f:field>
-                    </div>
-
-                    <div class="text-center text-lg-start mt-4 pt-2">
-                        <g:submitButton name="create" class="save btn btn-primary btn-lg"
-                                        style="padding-left: 2.5rem; padding-right: 2.5rem;"
-                                        value="${message(code: 'default.button.create.label', default: 'Create')}"/>
-                    </div>
-
-                    <div class="text-center text-lg-start mt-4 pt-2">
-                        <p class="small fw-bold mt-2 pt-1 mb-0">Have an Account? <a href="login" class="link-danger">Login</a></p>
-                    </div>
+                <!--Username input -->
+                <g:form controller="auth" action="doLogin" class="form-signin">
+                    <g:textField name="username" class="form-control" placeholder="Email" required="required" />
+                    <g:passwordField name="password" class="form-control" placeholder="Password" required="required" />
+                    <g:submitButton class="btn btn-lg btn-primary btn-block" name="login" value="Login"/>
 
                 </g:form>
+
+                <div class="text-center text-lg-start mt-4 pt-2">
+                    <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an Account? <a href="sign-up" class="link-danger">Sign up</a></p>
+                </div>
             </div>
         </div>
     </div>

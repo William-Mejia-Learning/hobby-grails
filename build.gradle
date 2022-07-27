@@ -23,6 +23,7 @@ apply plugin:"com.bertramlabs.asset-pipeline"
 
 repositories {
     maven { url "https://repo.grails.org/grails/core" }
+    mavenCentral()
 }
 
 configurations {
@@ -34,6 +35,7 @@ configurations {
 
 dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
+    compileOnly 'org.grails.plugins:spring-security-core:5.0.0'
     compileOnly "io.micronaut:micronaut-inject-groovy"
     console "org.grails:grails-console"
     implementation "org.springframework.boot:spring-boot-starter-logging"

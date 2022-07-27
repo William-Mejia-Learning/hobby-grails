@@ -13,11 +13,13 @@ class UrlMappings {
         "/"(view:"/index")
 
         //signup page
-        "/signup"(view: "/user/create")
-        "/register"{
-            controller = "index"
-            action = "index"
-        }
+        "/signup"(controller: "user", action: "create")
+
+        //Login
+        "/login"(controller: "auth", action: "login")
+
+        //create event
+        "/create-event"(controller: "event", action: "create")
 
 
 

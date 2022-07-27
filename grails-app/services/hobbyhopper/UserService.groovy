@@ -7,6 +7,8 @@ interface UserService {
 
     User get(Serializable id)
 
+    User save(String username, String password, boolean enabled, boolean accountExpired, boolean accountLocked, boolean passwordExpired)
+
     List<User> list(Map args)
 
     Long count()

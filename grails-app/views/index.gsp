@@ -29,10 +29,7 @@
                     <a class="nav-link active" aria-current="page" th:href="@{/event}">Events</a>
                 </li>
                 <li class="nav-item" sec:authorize="isAuthenticated()">
-                    <a class="nav-link" th:href="@{/event/create-edit-event}">Create an Event</a>
-                </li>
-                <li class="nav-item" sec:authorize="!isAuthenticated()">
-                    <a class="nav-link" th:href="@{/login}">Create an Event</a>
+                    <a class="nav-link" href="/create-event">Create an Event</a>
                 </li>
                 <li sec:authorize="isAuthenticated()" class="nav-item">
                     <a class="nav-link" th:href="@{/profile}">My profile</a>
@@ -76,9 +73,9 @@
             <h1 class="jumbotron-heading">Find Your Fun!</h1>
             <a class="btn btn-primary btn-xl rounded-pill mt-5" th:href="${'/event'}">View Events</a> <p class="my-auto">or</p>
 
-            <a sec:authorize="!isAuthenticated()" class="btn btn-primary btn-xl rounded-pill " href="${'/user/create'}">Sign up</a>
+            <a class="btn btn-primary btn-xl rounded-pill " href="${'/signup'}">Sign up</a>
 
-            <a sec:authorize="isAuthenticated()" class="btn btn-primary btn-xl rounded-pill " th:href="${'/event/create-edit-event'}">Create an event</a>
+            <a class="btn btn-primary btn-xl rounded-pill " href="${'/create-event'}">Create an event</a>
 
         </div>
     </div>
@@ -135,6 +132,23 @@
         </div>
     </div>
 </section>
+
+<footer class="bg-dark text-center text-white py-3 mt-auto">
+    <div class="container-fluid p-4 mb-0">
+        <!--            Social media links-->
+        <div class="socials">
+            <a class="btn btn-outline-light btn-floating m-1 px-3" role="button" href="/about">
+                <i class="fa-solid fa-info"></i>
+            </a>
+            <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://twitter.com/HobbyHoppr">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a class="btn btn-outline-light btn-floating m-1" role="button" href="https://github.com/HobbyHopper/hobby-hopper">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </div>
+</footer>
 %{--<footer th:replace="partials/partials.html :: footer"></footer>--}%
 %{--<script th:replace="partials/partials.html :: bootstrap-js"></script>--}%
 

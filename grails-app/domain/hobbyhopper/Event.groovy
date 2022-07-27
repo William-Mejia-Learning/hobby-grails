@@ -1,5 +1,7 @@
 package hobbyhopper
 
+import java.sql.Time
+
 class Event {
 
     long id;
@@ -8,11 +10,11 @@ class Event {
     String address;
     Date startDate;
     Date endDate;
-    String startTime;
-    String endTime;
+//    Time startTime;
+//    Time endTime;
     int categoryId;
 
-//    static belongsTo = [UserEvent]
+//    static belongsTo = [UserEvent]//
 
     static hasMany = [userEvents : UserEvent, images : Image]
 
@@ -24,8 +26,8 @@ class Event {
         address column: "address"
         startDate column: "start_date"
         endDate column: "end_date"
-        startTime column: "start_time"
-        endTime column: "end_time"
+//        startTime column: "start_time"
+//        endTime column: "end_time"
         categoryId column: "category_id"
 
         images joinTable: [name: "image", key: "id", column: "event_id"]
